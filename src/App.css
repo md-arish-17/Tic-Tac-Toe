@@ -1,0 +1,73 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+  background-color: rgb(13, 27, 31);
+  color: white;
+}
+
+.cellRow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.cellRow button{
+  background-color:  rgb(74, 133, 149);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: x-large;
+}
+
+.cellCon{
+  height: 200px;
+  width: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tableCell{
+  height: 50px;
+  width: 50px;
+}
+
+.btnSec{
+  display: flex;
+  gap: 10px;
+}
+
+.btnSec button{
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  background-color:  rgb(40, 69, 77);
+  color: rgb(145, 225, 225);
+  cursor: pointer;
+}
+
+/* footer{
+  background-color: rgb(35, 75, 76);
+  height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
