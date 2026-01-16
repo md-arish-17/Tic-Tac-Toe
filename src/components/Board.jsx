@@ -23,10 +23,13 @@ const Board = () => {
                 return board[a]
             }
         }
+        if(!board.includes(null)){
+            return "Draw"
+        }
         return false
     }
 
-    const isWinner = checkWinner()
+    const result = checkWinner()
 
     const handleClick = (index)=>{
         if(board[index] !== null){
@@ -42,11 +45,12 @@ const Board = () => {
 
     const resetBtn = ()=>{
         setBoard(Array(9).fill(null))
+        setXTurn(true)
     }
 
     useEffect(()=>{
         checkWinner()
-        console.log("Usman lala and zaheen batli")
+        console.log("Usman")
     },[board])
 
   return (
@@ -55,7 +59,15 @@ const Board = () => {
         <div>game board</div>
         <div className='cellCon'>
             {
-                isWinner ? (<>{alert(isWinner + " Won the Game")} {"Player "+isWinner+" won the Game"} </>) : (
+                result ? (<>
+                {
+                    result === "Draw" ? (
+                        <h2 className='drawText'>Its a draw</h2>
+                    ) : (
+                        <h2 className='winnerText'>Player {result} won the game</h2>
+                    )
+                }
+                </>) : (
                 <>
                 <div className='cellRow'>
                     <Cell value={board[0]} cellFunc={()=>{handleClick(0)}}/>

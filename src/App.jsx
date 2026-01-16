@@ -6,8 +6,8 @@ const App = () => {
   return (
     <div className='container'>
       <header>
-        <h1>Tic Tac Toe</h1>
-        <h4>Play.Think.Win</h4>
+        <h1 className='mainHead'>Tic Tac Toe</h1>
+        <h4 className='subHead'>Play.Think.Win</h4>
       </header>
       <main>
         <Board/>

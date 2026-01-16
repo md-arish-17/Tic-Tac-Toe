@@ -47,6 +47,7 @@
 .tableCell{
   height: 50px;
   width: 50px;
+  transition: all 0.3s ease-in-out;
 }
 
 .btnSec{
@@ -63,6 +64,9 @@
   cursor: pointer;
 }
 
+.tableCell:hover{
+  background-color:  rgb(102, 191, 216);
+}
 /* footer{
   background-color: rgb(35, 75, 76);
   height: 30px;
@@ -71,3 +75,33 @@
   align-items: center;
   justify-content: center;
 } */
+
+.drawText, .winnerText{
+  animation: scaleUp 1s ease-in-out infinite alternate;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width:260px) {
+  .container{
+    height: 110vh;
+  }
+  .btnSec{
+    display: flex;
+    flex-direction: column;
+  }
+  .mainHead{
+    font-size: 1.6rem;
+  }
+  .subHead{
+    font-size: 0.8rem;
+    /* margin-bottom: 50px; */
+  }
+}
